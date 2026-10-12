@@ -1,0 +1,11 @@
+{
+ "Name": "JoJo's Cookie Clicker",
+ "ID": "jojo cookie clicker",
+ "Author": "JoJo's Cookie Clicker contributors",
+ "Description": "Twelve JoJo's Bizarre Adventure Stand users join your bakery: feed them cookies to level up, unleash Stand abilities, and watch out for Doppio's nails.",
+ "ModVersion": 3,
+ "GameVersion": 2.053,
+ "Date": "10/11/2026",
+ "Dependencies": [],
+ "Disabled": 0
+}

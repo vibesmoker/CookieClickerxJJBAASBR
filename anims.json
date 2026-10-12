@@ -1,0 +1,218 @@
+{
+ "jotaro": {
+  "model-idle": {
+   "file": "anim/model-idle.webp",
+   "frames": 51,
+   "cols": 30,
+   "w": 132,
+   "h": 220,
+   "fps": 15
+  },
+  "stand-idle": {
+   "file": "anim/stand-idle.webp",
+   "frames": 31,
+   "cols": 20,
+   "w": 198,
+   "h": 260,
+   "fps": 15
+  },
+  "stand-rush": {
+   "file": "anim/stand-rush.webp",
+   "frames": 21,
+   "cols": 14,
+   "w": 281,
+   "h": 260,
+   "fps": 30
+  }
+ },
+ "joseph": {
+  "model-idle": {
+   "file": "anim/model-idle.webp",
+   "frames": 31,
+   "cols": 31,
+   "w": 102,
+   "h": 220,
+   "fps": 15
+  }
+ },
+ "dragonsdream": {
+  "model-idle": {
+   "file": "anim/model-idle.webp",
+   "frames": 51,
+   "cols": 35,
+   "w": 112,
+   "h": 220,
+   "fps": 15
+  }
+ },
+ "okuyasu": {
+  "stand-idle": {
+   "file": "anim/stand-idle.webp",
+   "frames": 41,
+   "cols": 25,
+   "w": 155,
+   "h": 260,
+   "fps": 15
+  },
+  "model-idle": {
+   "file": "anim/model-idle.webp",
+   "frames": 51,
+   "cols": 33,
+   "w": 121,
+   "h": 220,
+   "fps": 15
+  }
+ },
+ "giorno": {
+  "stand-idle": {
+   "file": "anim/stand-idle.webp",
+   "frames": 36,
+   "cols": 34,
+   "w": 115,
+   "h": 260,
+   "fps": 15
+  },
+  "model-idle": {
+   "file": "anim/model-idle.webp",
+   "frames": 48,
+   "cols": 48,
+   "w": 78,
+   "h": 220,
+   "fps": 15
+  }
+ },
+ "jolyne": {
+  "stand-idle": {
+   "file": "anim/stand-idle.webp",
+   "frames": 26,
+   "cols": 26,
+   "w": 99,
+   "h": 260,
+   "fps": 15
+  },
+  "stand-rush": {
+   "file": "anim/stand-rush.webp",
+   "frames": 21,
+   "cols": 15,
+   "w": 261,
+   "h": 260,
+   "fps": 30
+  },
+  "model-idle": {
+   "file": "anim/model-idle.webp",
+   "frames": 26,
+   "cols": 26,
+   "w": 124,
+   "h": 220,
+   "fps": 15
+  }
+ },
+ "avdol": {
+  "stand-idle": {
+   "file": "anim/stand-idle.webp",
+   "frames": 41,
+   "cols": 23,
+   "w": 168,
+   "h": 260,
+   "fps": 15
+  },
+  "model-idle": {
+   "file": "anim/model-idle.webp",
+   "frames": 41,
+   "cols": 35,
+   "w": 114,
+   "h": 220,
+   "fps": 15
+  }
+ },
+ "narancia": {
+  "stand-idle": {
+   "file": "anim/stand-idle.webp",
+   "frames": 30,
+   "cols": 20,
+   "w": 193,
+   "h": 170,
+   "fps": 15
+  },
+  "model-idle": {
+   "file": "anim/model-idle.webp",
+   "frames": 20,
+   "cols": 20,
+   "w": 189,
+   "h": 220,
+   "fps": 15
+  }
+ },
+ "kingcrimson": {
+  "stand-idle": {
+   "file": "anim/stand-idle.webp",
+   "frames": 60,
+   "cols": 26,
+   "w": 149,
+   "h": 260,
+   "fps": 15
+  },
+  "model-idle": {
+   "file": "anim/model-idle.webp",
+   "frames": 51,
+   "cols": 41,
+   "w": 96,
+   "h": 220,
+   "fps": 15
+  }
+ },
+ "iggy": {
+  "stand-idle": {
+   "file": "anim/stand-idle.webp",
+   "frames": 60,
+   "cols": 12,
+   "w": 320,
+   "h": 188,
+   "fps": 15
+  },
+  "model-idle": {
+   "file": "anim/model-idle.webp",
+   "frames": 23,
+   "cols": 22,
+   "w": 181,
+   "h": 220,
+   "fps": 15
+  },
+  "model-nap": {
+   "file": "anim/model-nap.webp",
+   "frames": 16,
+   "cols": 16,
+   "w": 183,
+   "h": 220,
+   "fps": 15
+  },
+  "model-walk": {
+   "file": "anim/model-walk.webp",
+   "frames": 31,
+   "cols": 16,
+   "w": 241,
+   "h": 220,
+   "fps": 20
+  }
+ },
+ "jonathan": {
+  "model-idle": {
+   "file": "anim/model-idle.webp",
+   "frames": 31,
+   "cols": 30,
+   "w": 132,
+   "h": 220,
+   "fps": 15
+  }
+ },
+ "mista": {
+  "model-idle": {
+   "file": "anim/model-idle.webp",
+   "frames": 21,
+   "cols": 21,
+   "w": 158,
+   "h": 220,
+   "fps": 15
+  }
+ }
+}

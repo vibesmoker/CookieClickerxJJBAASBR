@@ -1,0 +1,24 @@
+# ---- Game-derived assets (copyrighted: extracted/rendered from All-Star Battle R) ----
+# Regenerate them from your own copy of the game with tools/asset-pipeline (see README).
+mod/jojos-cookie-clicker/characters/*/*.png
+mod/jojos-cookie-clicker/characters/*/anim/
+mod/jojos-cookie-clicker/assets/*.png
+mod/jojos-cookie-clicker/assets/*.mp3
+
+# ---- Asset pipeline working files ----
+tools/asset-pipeline/asbr-extract/
+tools/asset-pipeline/frames/
+tools/asset-pipeline/cc2_xfbin_blender/
+tools/asset-pipeline/extract_motions.log
+*.xfbin
+*.cpk
+*.blend
+*.blend1
+
+# ---- General ----
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+Thumbs.db
+*.zip

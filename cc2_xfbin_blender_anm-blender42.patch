@@ -1,0 +1,63 @@
+diff -ru --strip-trailing-cr '--exclude=__pycache__' a/blender/importer.py b/blender/importer.py
+--- a/blender/importer.py	2026-10-11 22:37:36.462408345 -0400
++++ b/blender/importer.py	2026-10-11 18:58:52.016636676 -0400
+@@ -464,11 +464,11 @@
+                     new_bmesh.free()
+ 
+                     # Use the custom normals we made eariler
+-                    overall_mesh.create_normals_split()
++                    pass  # create_normals_split removed in 4.1
+                     overall_mesh.normals_split_custom_set_from_vertices(
+                         custom_normals)
+-                    overall_mesh.auto_smooth_angle = 0
+-                    overall_mesh.use_auto_smooth = True
++                    pass
++                    pass
+ 
+                     #add uv data
+                     for i in range(len(mesh.vertices[0].uv)):
+@@ -702,15 +702,8 @@
+             shader = int_to_hex_str(meshmat.flags, 4)
+             
+ 
+-            if shader in shaders_dict:
+-                material = shaders_dict.get(shader)(
+-                    self, meshmat, xfbin_mat, material_name, mesh_obj, material_name)
+-                materials.append(material)
+-            else:
+-                material = shaders_dict.get("default")(
+-                    self, meshmat, xfbin_mat, material_name, mesh_obj, material_name)
+-
+-                materials.append(material)
++            material = simple_material(meshmat, xfbin_mat, material_name)
++            materials.append(material)
+             
+         else:
+             material = bpy.data.materials.get(material_name)
+@@ -1048,4 +1041,24 @@
+ 
+ def menu_func_import(self, context):
+     self.layout.operator(ImportXFBIN.bl_idname,
+-                         text='XFBIN Model Container (.xfbin)')
+\ No newline at end of file
++                         text='XFBIN Model Container (.xfbin)')
++
++def simple_material(meshmat, xfbin_mat, name):
++    """Flat textured material (Blender 4.x safe): diffuse texture -> Principled base color + alpha."""
++    mat = bpy.data.materials.new(name)
++    mat.use_nodes = True
++    nt = mat.node_tree
++    bsdf = nt.nodes.get('Principled BSDF')
++    tex = nt.nodes.new('ShaderNodeTexImage')
++    img = None
++    if xfbin_mat.texture_groups and xfbin_mat.texture_groups[0].texture_chunks:
++        img = bpy.data.images.get(f'{xfbin_mat.texture_groups[0].texture_chunks[0].name}_0')
++    tex.image = img
++    tex.interpolation = 'Linear'
++    nt.links.new(tex.outputs['Color'], bsdf.inputs['Base Color'])
++    if meshmat.sourceFactor in (1, 2, 5):
++        nt.links.new(tex.outputs['Alpha'], bsdf.inputs['Alpha'])
++    mat['jj_alpha'] = meshmat.sourceFactor
++    mat['jj_cull'] = meshmat.cullMode
++    nt.nodes.active = tex
++    return mat
